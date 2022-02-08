@@ -1,51 +1,92 @@
+
 <style>
-  /* Modify the background color */
-	.navbar .nav-item:hover .nav-link{ color: rgb(122, 20, 148)   }
-  .navbar .nav-item:active .nav-link {color: blue;font-size: large;}
-  .nav-item .nav-item .nav-link{align-items: right;}
-  .navbar .nav-item .nav-link{color: white; }
-  .navbar:active .nav-item .nav-link:active{color: blue; font-size: large;}
-  .navbar .navbar-brand {margin-left: auto;}
-            .navbar-nav {
-            margin-left:auto;
-        }
-	
-  .navbar-dark {
-      background-color: #282a36;
+ /*modified navbar*/
+  .navbar {
+      background-color: #7952b3;
       align-items: right;
   }
-  /* Modify brand and text color */
 
-  
+@font-face {
+  font-family: myFont;
+  src: url(PublicPixel.ttf);
+}
+
+.navbar-nav {
+            margin:auto;}
+  .navbar .navbar-nav .nav-link {
+  color: #000000;
+  font-size: 1.1em;
+  font-weight:400 ;
+  position: relative;
+}
+.navbar .navbar-nav .nav-link:hover {
+  color: white;
+}
+.navbar .navbar-nav .nav-link::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: white;
+  color: transparent;
+  width: 0%;
+  content: '.';
+  height: 3px;
+  transition: all 0.5s;
+}
+.navbar .navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+@media only screen and (min-width: 960px) {
+  .navbar .navbar-nav .nav-link {
+    padding: 1em 0.7em;
+  }
+  .navbar {
+    padding: 0;
+  }
+  .navbar .navbar-brand {
+    padding: 0 0.7em;
+    transition: all 0.5s;
+  }
+
+  .navbar .navbar-nav .nav-link {
+  transition: all 0.5s;
+}
+
+}
   
 </style>
 
 
-<nav class="navbar navbar-expand-lg fixed-top navbar-dark  "> 
-    <div class="container-fluid">
-      <a class="navbar-brand" href="/"><img src="https://i.postimg.cc/j5ktXZFk/logo.gif" alt="" width=150" height="70" class="d-inline-block align-text-top"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ">
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark"> 
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/"><img src="https://i.postimg.cc/j5ktXZFk/logo.gif" alt="" width="150" height="70" class="d-inline-block align-text-top"></a><br>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ">
+        <li class="nav-item active">
+          <a class="nav-link" aria-current="page" href="/home"><i class="fab fa-amazon"></i>Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/resume" >Resume</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/portfolio">Work</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/home">Home</a>
+            <a class="nav-link" href="/contact">Contact</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/resume" >Resume</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/portfolio">Work</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/about">About</a>
-            <li class="nav-item">
-              <a class="nav-link" href="/contact">Contact</a>
-            </li>
-          </li>
-          </li>
-        </ul>
-      </div>
+        </li>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
