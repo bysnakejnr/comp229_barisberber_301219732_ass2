@@ -1,4 +1,4 @@
-
+<link rel="icon" type="image/x-icon" href="favicon.ico">
 <style>
   body{padding-top: 170px;}
  /*modified navbar*/
@@ -7,7 +7,7 @@
       flex-direction: column;
 
   }
-
+  .baslik {font-family: myFont; }
 @font-face {
   font-family: myFont;
   src: url(PublicPixel.ttf);
@@ -19,9 +19,9 @@
 
 
   .navbar .navbar-nav .nav-link {
-  color: #000000;
+  color: white;
   font-size: 1.1em;
-  font-weight:400 ;
+  font-weight:600 ;
   position: relative;
 }
 .navbar .navbar-nav .nav-link:hover {
@@ -33,7 +33,7 @@
   left: 0;
   right: 0;
   margin: auto;
-  background-color: white;
+  background-color: black;
   color: transparent;
   width: 0%;
   content: '.';
@@ -67,8 +67,8 @@
 
 
 <nav class="navbar navbar-expand-lg fixed-top navbar-dark"> 
-  <div class="row">
-    <a class="navbar-brand" href="/"><img src="https://i.postimg.cc/j5ktXZFk/logo.gif" alt="" width="150" height="70"></a>
+  <div class="container">
+    <a class="navbar-brand" href="/"><img src="logo.gif" alt="" width="150" height="70"></a>
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -80,10 +80,10 @@
           <a class="nav-link" aria-current="page" href="/home">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/resume" >Resume</a>
+          <a class="nav-link" href="/projects" >Projects</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/portfolio">Work</a>
+          <a class="nav-link" href="/services">Services</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/about">About</a>

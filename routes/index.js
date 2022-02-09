@@ -17,18 +17,19 @@ router.get('/about', function(req, res, next) {
 });
 
 /* GET portfolio page. */
-router.get('/portfolio', function(req, res, next) {
-  res.render('index', { title: 'Portfolio' });
+router.get('/services', function(req, res, next) {
+  res.render('./parts/services', { title: 'Services' });
 });
 
 /* GET Resume page. */
-router.get('/resume', function(req, res, next) {
-  res.render('index', { title: 'Resume' });
+router.get('/projects', function(req, res, next) {
+  res.render('./parts/projects', { title: 'Projects' });
 });
 
 /* GET Contact page. */
 router.get('/contact', function(req, res, next) {
-  res.render('index', { title: 'Contact' });
+  res.render('./parts/contact', { title: 'Contact' });
 });
 
 module.exports = router;
+
