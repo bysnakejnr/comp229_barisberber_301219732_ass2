@@ -1,0 +1,41 @@
+<%- include ../partials/header.ejs %>
+<%- include ../partials/main_nav.ejs %>
+
+
+<main class="container">
+    <div class="row">
+        <h3><%=title  %></h3>
+        <form class="form" method="POST">
+            <div class="form-group">
+
+                <label for="name">Full Name</label>
+                <input type="text" class="form-control"
+                id="nameTextField"
+                placeholder="Enter title"
+                name="name" 
+                value="<%=Contact.name%>"
+                style="width: 500px;"
+                required>
+                <label for="email">Email</label>
+                <input type="email" class="form-control form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="email" required style="width: 500px;" value="<%=Contact.email%>">
+                <label for="number">Phone Number</label>
+                <input class="form-control form-control" type="text" placeholder="Input Your Phone Number" name="number" required style="width: 500px;" value="<%=Contact.number%>">
+      
+                <br><button type="submit" class="btn btn-info">Submit</button>
+                  <a href="/contact-list"  class="btn btn-outline-danger">Cancel</a>
+
+
+
+
+            </div>
+
+
+
+
+
+    </div>
+</form>
+
+
+
+</main>

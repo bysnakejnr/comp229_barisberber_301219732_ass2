@@ -1,0 +1,23 @@
+<%- include ../partials/header.ejs %>
+<%- include ../partials/main_nav.ejs %>
+
+<main class="container">
+    <div class="row">
+        <h3 class="baslik">Contact Add</h3>
+        <form class="form" method="post">
+          <label for="name">Full Name</label>
+          <input class="form-control" type="text" placeholder="Input Your Full Name" name="name" required style="width: 500px;">
+          <label for="email">Email</label>
+          <input type="email" class="form-control form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="email" required style="width: 500px;">
+          <label for="number">Phone Number</label>
+          <input class="form-control form-control" type="text" placeholder="Input Your Phone Number" name="number" required style="width: 500px;">
+
+          <br><button type="submit" class="btn btn-info">Submit</button>
+            <a href="/contact-list"  class="btn btn-outline-danger">Cancel</a>
+
+    </div>
+</form>
+
+
+
+</main>

@@ -1,0 +1,46 @@
+<%- include ../partials/header.ejs %>
+<%- include ../partials/main_nav.ejs %>
+    <style>
+    i{color: darkslateblue ;
+    }
+    i:hover {    color: #7952b3;}
+    
+    i.fa-trash:hover  {color: red;}
+    </style>
+
+
+<main class="container">
+  
+
+<table class="table table-hover">
+<h3 class="baslik"><%=title  %></h3>
+<br>
+<th scope="col"></th>
+<th scope="col">Name</th>
+<th scope="col">Number</th>
+<th scope="col">Email</th>
+<th scope="col">Edit</th>
+<th scope="col" >Delete</th>
+       <%  for(let count = 0; count< ContactList.length; count++) {    %>
+      <tr>
+        <th scope="row"><%= count+1 %></th>
+        <td><%= ContactList[count].name %></td>
+        <td><%= ContactList[count].number %></td>
+        <td><%= ContactList[count].email %></td>
+        <td> 
+          <a href="/contact-list/edit/<%= ContactList[count]._id %>">
+            <i class="fas fa-edit"></i>
+          </a></td>
+          <td> 
+            <a href="/contact-list/delete/<%= ContactList[count]._id %>" onclick="return confirm('Are you sure? It looks important!')">
+              <i class="fas fa-trash" ></i></a>
+      </tr>
+      <% } %>
+
+      
+
+      
+    </tbody>
+  </table>
+  <a href="/contact-list/add" class="btn btn-outline-success" role="button">Add a Contact</a>
+</main>
