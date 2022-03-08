@@ -15,14 +15,16 @@
 <table class="table table-hover">
 <h3>Contact List</h3>
 <br>
+<thead>
 <th scope="col"></th>
 <th scope="col">Name</th>
 <th scope="col">Number</th>
 <th scope="col">Email</th>
 <th scope="col">Edit</th>
-<th scope="col" >Delete</th>
+<th scope="col" >Delete</th></thead>
        <%  for(let count = 0; count< ContactList.length; count++) {    %>
       <tr>
+        <% if(typeof displayName == 'string' && displayName){ %>
         <th scope="row"><%= count+1 %></th>
         <td><%= ContactList[count].name %></td>
         <td><%= ContactList[count].number %></td>
@@ -35,6 +37,15 @@
             <a href="/contact-list/delete/<%= ContactList[count]._id %>" onclick="return confirm('Are you sure? It looks important!')">
               <i class="fas fa-trash" ></i></a>
       </tr>
+
+      <% } else { %>
+        <th scope="row"><%= count+1 %></th>
+        <td><%= ContactList[count].name %></td>
+        <td><%= ContactList[count].number %></td>
+        <td><%= ContactList[count].email %></td>
+        
+
+        <% } %>
       <% } %>
 
       
